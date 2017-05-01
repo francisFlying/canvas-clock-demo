@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600" style="border:1px solid red"></canvas>
+</body>
+<script src="jquery-2.1.4.js"></script>
+<script src="clock.js"></script>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+
+    //要绘制大圆：必须知道大圆的圆心和半径
+    //要绘制刻度线，必须要知道刻度线的长度和线宽
+    //要绘制文字：必须要知道：文字大小，字体，颜色
+    var clock=new Clock({
+        ctx:ctx,
+        bigX:300,
+        bigY:300,
+        bigRadius:150,
+        bigLength:20,
+        smallLength:8,
+        bigWidth:8,
+        smallWidth:4,
+        fontSize:"20px",
+        fontFamily:"微软雅黑",
+        fontColor:"red"
+    })
+</script>
+</html>
